@@ -1,11 +1,11 @@
-package com.example.sampleapplication.networkUtils
+package com.example.sampleapplication.dbUtils
 
-import com.example.sampleapplication.BASE_URL
-import com.example.sampleapplication.BREED_ENDPOINT
+import com.example.sampleapplication.networkUtils.BASE_URL
+import com.example.sampleapplication.networkUtils.BREED_ENDPOINT
+import com.example.sampleapplication.networkUtils.BreedDetails
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import retrofit2.http.GET
 
 interface DogDataService {

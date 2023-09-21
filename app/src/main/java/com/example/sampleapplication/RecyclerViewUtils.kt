@@ -40,6 +40,7 @@ class DogBreedAdapter(
     }
     fun refreshList(newDataList: List<BreedDetails>){
         breeds = newDataList
+        notifyDataSetChanged()
 
     }
 }

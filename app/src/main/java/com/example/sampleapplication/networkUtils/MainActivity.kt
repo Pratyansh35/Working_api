@@ -1,4 +1,4 @@
-package com.example.sampleapplication
+package com.example.sampleapplication.networkUtils
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sampleapplication.DogBreedAdapter
 import com.example.sampleapplication.databinding.ActivityMainBinding
-import com.example.sampleapplication.networkUtils.BreedDetails
-import com.example.sampleapplication.networkUtils.api
+import com.example.sampleapplication.dbUtils.api
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.btn.setOnClickListener{
             binding.pb.visibility = View.VISIBLE
             // Fetch the datails using retrofit call
+
             api.fetchDogBreeds().enqueue(object : Callback<List<BreedDetails>?> {
                 override fun onResponse(
                     call: Call<List<BreedDetails>?>,
